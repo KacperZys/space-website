@@ -1,0 +1,63 @@
+@import 'base';
+@import 'variables';
+
+.container {
+    background-image: url('../starter-code/assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    &__logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__menu-img {
+        width: 24px;
+        height: 21px;
+    }
+}
+
+.main {
+    text-align: center;
+    height: 85%;
+    position: relative;
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    &__h1 {
+        font-size: 8rem;
+        margin: .5em 0;
+    }
+
+    &__btn {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.big-font {
+    font-size: 2.3rem;
+}

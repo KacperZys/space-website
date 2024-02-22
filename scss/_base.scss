@@ -1,0 +1,37 @@
+:root {
+    font-size: 62.5%;
+    font-family: "Bellefair", "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1.2rem;
+}

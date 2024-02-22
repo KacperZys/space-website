@@ -1,0 +1,93 @@
+:root {
+  font-size: 62.5%;
+  font-family: "Bellefair", "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  background-image: url("../starter-code/assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.header__logo-img {
+  width: 40px;
+  height: 40px;
+}
+.header__menu-img {
+  width: 24px;
+  height: 21px;
+}
+
+.main {
+  text-align: center;
+  height: 85%;
+  position: relative;
+}
+.main__text {
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+.main__h1 {
+  font-size: 8rem;
+  margin: 0.5em 0;
+}
+.main__btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.big-font {
+  font-size: 2.3rem;
+}/*# sourceMappingURL=main.css.map */

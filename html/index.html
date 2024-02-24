@@ -16,12 +16,22 @@
 
 <body class="body">
     <div class="container">
+        <!-- hidden menu -->
+        <div class="hidden-menu">
+            <img class="hidden-menu__close-image" src="/starter-code/assets/shared/icon-close.svg" alt="close menu">
+            <ol class="hidden-menu__list">
+                <li class="hidden-menu__list-item"><a class="hidden-menu__link" href="">HOME</a></li>
+                <li class="hidden-menu__list-item"><a class="hidden-menu__link" href="">DESTINATION</a></li>
+                <li class="hidden-menu__list-item"><a class="hidden-menu__link" href="">CREW</a></li>
+                <li class="hidden-menu__list-item"><a class="hidden-menu__link" href="">TECHNOLOGY</a></li>
+            </ol>
+        </div>
         <header class="header">
             <div class="header__logo">
                 <img class="header__logo-image" src="../starter-code/assets/shared/logo.svg" alt="logo">
             </div>
             <div class="header__menu">
-                <img class="header__menu-image" src="../starter-code/assets/shared/icon-hamburger.svg" alt="">
+                <img class="header__menu-image" src="../starter-code/assets/shared/icon-hamburger.svg" alt="open menu">
             </div>
         </header>
         <main class="main">
@@ -33,13 +43,14 @@
                     truly
                     out of this world experience!</p>
             </div>
-            <div class="main__btn-div">
-                <button class="main__btn big-font">
+            <div class="main__anchor-div">
+                <a class="main__anchor big-font">
                     EXPLORE
-                </button>
+                </a>
             </div>
         </main>
     </div>
+    <script src="/javascript/home.js"></script>
 </body>
 
 </html>

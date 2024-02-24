@@ -51,6 +51,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5rem;
+  height: 10%;
 }
 .header__logo-img {
   width: 40px;
@@ -64,7 +65,13 @@ p {
 .main {
   text-align: center;
   height: 85%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main__btn-div {
+  padding-bottom: 15em;
+  padding-top: 5em;
 }
 .main__text {
   font-size: 1.8rem;
@@ -78,16 +85,10 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
   text-align: center;
   cursor: pointer;
 }
 
 .big-font {
   font-size: 2.3rem;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=home.css.map */

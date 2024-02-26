@@ -21,6 +21,10 @@
     @include media(medium) {
         background-image: url('../starter-code/assets/home/background-home-tablet.jpg');
     }
+
+    @include media(large) {
+        background-image: url('../starter-code/assets/home/background-home-desktop.jpg');
+    }
 }
 
 .header {
@@ -33,15 +37,22 @@
         height: 40px;
     }
 
-    &__menu {
-        @include media(medium) {
-            height: 10%;
-            background: gray;
-            position: absolute;
-            top: 0;
-            right: 0;
-            @include flex(row, center, flex-start);
+    &__line {
+        border-bottom: 1px solid gray;
+        width: 40%;
+        position: absolute;
+        top: 7em;
+        left: 15em;
+        display: none;
+
+        @include media(large) {
+            display: block;
         }
+    }
+
+    &__menu {
+
+
 
         &-image {
             width: 24px;
@@ -60,10 +71,29 @@
                 @include flex(row, center, flex-end);
                 list-style-type: none;
 
+
                 &-item {
                     letter-spacing: 2px;
                     padding: 0 20px;
                     font-size: 1.3rem;
+
+
+                }
+            }
+
+            @include media(large) {
+                margin: auto;
+                counter-reset: first;
+                counter-reset: second;
+
+                &-item {
+
+                    &::before {
+                        content: counter(first) counter(second);
+                        counter-increment: second;
+                        margin-right: 15px;
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -71,6 +101,22 @@
         &-link {
             text-decoration: none;
             color: $white;
+        }
+
+        @include media(medium) {
+            height: 10%;
+            background: gray;
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include flex(row, center, flex-start);
+        }
+
+        @include media(large) {
+            width: 60%;
+            top: 2em;
+            background: transparent;
+            backdrop-filter: blur(5px);
         }
     }
 }
@@ -81,6 +127,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 80%;
+
+
 
     &__anchor-div {
         width: 150px;
@@ -113,6 +161,24 @@
     &__h1 {
         font-size: 8rem;
         margin: .5em 0;
+    }
+
+    @include media(large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30% 70%;
+
+        &__content-div {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        &__anchor-div {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            width: 250px;
+            height: 250px;
+        }
     }
 }
 

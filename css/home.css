@@ -57,6 +57,11 @@ p {
     background-image: url("../starter-code/assets/home/background-home-tablet.jpg");
   }
 }
+@media (min-width: 1200px) {
+  .container {
+    background-image: url("../starter-code/assets/home/background-home-desktop.jpg");
+  }
+}
 
 .header {
   display: flex;
@@ -70,17 +75,17 @@ p {
   width: 40px;
   height: 40px;
 }
-@media (min-width: 700px) {
-  .header__menu {
-    height: 10%;
-    background: gray;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+.header__line {
+  border-bottom: 1px solid gray;
+  width: 40%;
+  position: absolute;
+  top: 7em;
+  left: 15em;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .header__line {
+    display: block;
   }
 }
 .header__menu-image {
@@ -110,9 +115,44 @@ p {
     font-size: 1.3rem;
   }
 }
+@media (min-width: 1200px) {
+  .header__menu-list {
+    margin: auto;
+    counter-reset: first;
+    counter-reset: second;
+  }
+  .header__menu-list-item::before {
+    content: counter(first) counter(second);
+    counter-increment: second;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+}
 .header__menu-link {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+@media (min-width: 700px) {
+  .header__menu {
+    height: 10%;
+    background: gray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .header__menu {
+    width: 60%;
+    top: 2em;
+    background: transparent;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
 }
 
 .main {
@@ -151,6 +191,23 @@ p {
 .main__h1 {
   font-size: 8rem;
   margin: 0.5em 0;
+}
+@media (min-width: 1200px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 70%;
+  }
+  .main__content-div {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main__anchor-div {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .big-font {

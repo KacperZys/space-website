@@ -10,6 +10,7 @@
 
     $breakpoints: (
         medium: 'min-width: 700px',
+        large: 'min-width: 1200px',
     );
 
 $size: map-get($breakpoints, $breakpoint);

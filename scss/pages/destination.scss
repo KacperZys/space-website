@@ -1,0 +1,35 @@
+@import '../assets/base';
+@import '../assets/variables';
+@import '../assets/mixins';
+
+:root {
+    @include media(medium) {
+        font-size: 13px;
+    }
+
+    @include media(large) {
+        font-size: 16px;
+    }
+}
+
+.container {
+    background-image: url('../starter-code/assets/destination/background-destination-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+
+    @include media(medium) {
+        background-image: url('../starter-code/assets/destination/background-destination-tablet.jpg');
+    }
+
+    @include media(large) {
+        background-image: url('../starter-code/assets/destination/background-destination-desktop.jpg');
+    }
+}
+
+@import '../assets/header';
+@import '../assets/hidden-menu';

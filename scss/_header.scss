@@ -1,0 +1,93 @@
+.header {
+    @include flex(row, center, space-between);
+    margin-bottom: 5rem;
+    height: 10%;
+
+    &__logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__line {
+        border-bottom: 1px solid gray;
+        width: 40%;
+        position: absolute;
+        top: 7em;
+        left: 15em;
+        display: none;
+
+        @include media(large) {
+            display: block;
+        }
+    }
+
+    &__menu {
+
+
+
+        &-image {
+            width: 24px;
+            height: 21px;
+            cursor: pointer;
+
+            @include media(medium) {
+                display: none;
+            }
+        }
+
+        &-list {
+            display: none;
+
+            @include media(medium) {
+                @include flex(row, center, flex-end);
+                list-style-type: none;
+
+
+                &-item {
+                    letter-spacing: 2px;
+                    padding: 0 20px;
+                    font-size: 1.3rem;
+
+
+                }
+            }
+
+            @include media(large) {
+                margin: auto;
+                counter-reset: first;
+                counter-reset: second;
+
+                &-item {
+
+                    &::before {
+                        content: counter(first) counter(second);
+                        counter-increment: second;
+                        margin-right: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $white;
+        }
+
+        @include media(medium) {
+            height: 10%;
+            background: gray;
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include flex(row, center, flex-start);
+        }
+
+        @include media(large) {
+            width: 60%;
+            top: 2em;
+            background: transparent;
+            backdrop-filter: blur(5px);
+        }
+    }
+}

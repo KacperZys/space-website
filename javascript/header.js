@@ -1,5 +1,5 @@
 $(function () {
-    $(".paste-header").load("header.html", function () {
+    $(".paste-header").load("assets/header.html", function () {
         const openMenu = document.querySelector('.header__menu-image');
         const closeMenu = document.querySelector('.hidden-menu__close-image');
         const menu = document.querySelector('.hidden-menu');

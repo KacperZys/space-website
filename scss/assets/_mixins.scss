@@ -25,3 +25,11 @@ $size: map-get($breakpoints, $breakpoint);
     @error '"#{$breakpoint}" - Nie rozpoznaje takiej wielkosci';
 }
 }
+
+@mixin counter-before-el($content: '') {
+    content: $content;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    @content;
+}

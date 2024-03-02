@@ -17,30 +17,33 @@
 <body>
     <div class="container">
         <span class="paste-header"></span>
+
         <main class="main">
             <p class="main__destination">PICK YOUR DESTINATION</p>
-            <div class="main__image">
-                <img src="" alt="">
+            <div class="main__image-container">
+                <img class="main__image-container-img" src="" alt="">
             </div>
-            <div class="main__list-div">
-                <ul class="main__list">
-                    <li class="main__list-item">MOON</li>
-                    <li class="main__list-item">MARS</li>
-                    <li class="main__list-item">EUROPA</li>
-                    <li class="main__list-item">TITAN</li>
+            <div class="main__list">
+                <ul class="main__list-container">
+                    <li class="main__list-item" value="0">MOON</li>
+                    <li class="main__list-item" value="1">MARS</li>
+                    <li class="main__list-item" value="2">EUROPA</li>
+                    <li class="main__list-item" value="3">TITAN</li>
                 </ul>
             </div>
-            <div class="main__text-container">
-                <h1 class="main__text-h1"></h1>
-                <p class="main__text"></p>
+            <div class="main__text">
+                <h1 class="main__text-title"></h1>
+                <p class="main__text-container"></p>
             </div>
             <footer class="main__footer">
                 <div class="main__footer-distance"></div>
                 <div class="main__footer-travel-time"></div>
             </footer>
         </main>
+
     </div>
     <script src="/javascript/header.js" async></script>
+    <script src="/javascript/destination.js" async></script>
 </body>
 
 </html>

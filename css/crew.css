@@ -128,9 +128,10 @@ p {
   }
   .header__menu-list-item::before {
     content: counter(first) counter(second);
-    counter-increment: second;
-    margin-right: 15px;
     font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    counter-increment: second;
   }
 }
 .header__menu-link {

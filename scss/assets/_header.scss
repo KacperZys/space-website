@@ -58,10 +58,9 @@
                 &-item {
 
                     &::before {
-                        content: counter(first) counter(second);
-                        counter-increment: second;
-                        margin-right: 15px;
-                        font-weight: bold;
+                        @include counter-before-el(counter(first) counter(second)) {
+                            counter-increment: second;
+                        }
                     }
                 }
             }

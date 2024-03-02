@@ -128,9 +128,10 @@ p {
   }
   .header__menu-list-item::before {
     content: counter(first) counter(second);
-    counter-increment: second;
-    margin-right: 15px;
     font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    counter-increment: second;
   }
 }
 .header__menu-link {
@@ -203,4 +204,41 @@ p {
 
 .hidden {
   display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main__destination {
+  font-size: 2.8rem;
+}
+.main__destination::before {
+  content: "01";
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 15px;
+  color: gray;
+  opacity: 0.7;
+}
+.main__image-container {
+  margin: 3em 0;
+}
+.main__image-container-img {
+  width: 20rem;
+}
+.main__list-container {
+  list-style-type: none;
+}
+.main__list-item {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 0.8em;
+  cursor: pointer;
+}
+.main__list-item:hover {
+  transition: color 0.5s;
+  color: rgb(184, 180, 180);
 }/*# sourceMappingURL=destination.css.map */

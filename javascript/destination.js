@@ -17,8 +17,11 @@ function setData(e) {
         .then(obj => {
             console.log(obj);
             document.querySelector('.main__image-container-img').src = obj.images.webp;
+            document.querySelector('.main__image-container-img').alt = `image of ${obj.name}`;
             document.querySelector('.main__text-title').innerHTML = obj.name;
             document.querySelector('.main__text-container').innerHTML = obj.description;
+            document.querySelector('.main__footer-distance > .main__footer-value').innerHTML = obj.distance;
+            document.querySelector('.main__footer-travel-time > .main__footer-value').innerHTML = obj.travel;
         })
         .catch(err => console.log(err));
 }

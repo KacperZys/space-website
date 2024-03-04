@@ -4,7 +4,7 @@
 
 :root {
     @include media(medium) {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     @include media(large) {
@@ -20,8 +20,6 @@
     color: white;
     padding: 20px;
     min-height: 100svh;
-    display: flex;
-    flex-direction: column;
     position: relative;
 
     @include media(medium) {
@@ -39,8 +37,23 @@
 .main {
     @include flex(column, center, flex-start);
 
+    @include media(large) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 120px);
+    }
+
     &__destination {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
+
+        @include media(medium) {
+            align-self: flex-start;
+        }
+
+        @include media(large) {
+            grid-column: 2/6;
+            grid-row: 2/3;
+        }
 
         &::before {
             @include counter-before-el('01') {
@@ -53,25 +66,48 @@
     &__image-container {
         margin: 3em 0;
 
+        @include media(large) {
+            grid-column: 3/5;
+            grid-row: 4/6;
+        }
+
         &-img {
             width: 20rem;
+
+            @include media(large) {
+                width: 30rem;
+            }
         }
     }
 
     &__list {
+
+        @include media(large) {
+            grid-column: 8/12;
+            grid-row: 2/3;
+        }
+
         &-container {
             list-style-type: none;
         }
 
         &-item {
             display: inline-block;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin: 0 .5em;
             cursor: pointer;
 
             &:hover {
                 transition: color .5s;
                 color: rgb(184, 180, 180);
+            }
+
+            @include media(large) {
+                font-size: 1.4rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -80,8 +116,14 @@
         text-align: center;
         margin: 3em 0;
 
+        @include media(large) {
+            grid-column: 8/12;
+            grid-row: 3/5;
+            text-align: left;
+        }
+
         &-title {
-            font-size: 8rem;
+            font-size: 6rem;
             text-transform: uppercase;
             font-weight: normal;
             margin: .2em 0;
@@ -101,16 +143,31 @@
         justify-content: center;
         gap: 45px;
 
+        @include media(large) {
+            grid-column: 8/12;
+            grid-row: 6/7;
+            justify-content: flex-start;
+        }
+
         &-name {
             font-size: 1.5rem;
             margin-bottom: 1em;
             text-align: center;
             color: rgb(196, 203, 233);
+
+            @include media(large) {
+                text-align: left;
+            }
         }
 
         &-value {
             font-size: 2.8rem;
             text-align: center;
+            text-transform: uppercase;
+
+            @include media(large) {
+                text-align: left;
+            }
         }
     }
 }

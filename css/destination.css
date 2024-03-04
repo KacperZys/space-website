@@ -38,7 +38,7 @@ p {
 
 @media (min-width: 700px) {
   :root {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
@@ -55,8 +55,6 @@ p {
   color: white;
   padding: 20px;
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 @media (min-width: 700px) {
@@ -214,8 +212,26 @@ p {
   align-items: center;
   justify-content: flex-start;
 }
+@media (min-width: 1200px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 120px);
+  }
+}
 .main__destination {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
+}
+@media (min-width: 700px) {
+  .main__destination {
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .main__destination {
+    grid-column: 2/6;
+    grid-row: 2/3;
+  }
 }
 .main__destination::before {
   content: "01";
@@ -228,15 +244,32 @@ p {
 .main__image-container {
   margin: 3em 0;
 }
+@media (min-width: 1200px) {
+  .main__image-container {
+    grid-column: 3/5;
+    grid-row: 4/6;
+  }
+}
 .main__image-container-img {
   width: 20rem;
+}
+@media (min-width: 1200px) {
+  .main__image-container-img {
+    width: 30rem;
+  }
+}
+@media (min-width: 1200px) {
+  .main__list {
+    grid-column: 8/12;
+    grid-row: 2/3;
+  }
 }
 .main__list-container {
   list-style-type: none;
 }
 .main__list-item {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0 0.5em;
   cursor: pointer;
 }
@@ -244,12 +277,27 @@ p {
   transition: color 0.5s;
   color: rgb(184, 180, 180);
 }
+@media (min-width: 1200px) {
+  .main__list-item {
+    font-size: 1.4rem;
+  }
+  .main__list-item:first-child {
+    margin-left: 0;
+  }
+}
 .main__text {
   text-align: center;
   margin: 3em 0;
 }
+@media (min-width: 1200px) {
+  .main__text {
+    grid-column: 8/12;
+    grid-row: 3/5;
+    text-align: left;
+  }
+}
 .main__text-title {
-  font-size: 8rem;
+  font-size: 6rem;
   text-transform: uppercase;
   font-weight: normal;
   margin: 0.2em 0;
@@ -266,13 +314,31 @@ p {
   justify-content: center;
   gap: 45px;
 }
+@media (min-width: 1200px) {
+  .main__footer {
+    grid-column: 8/12;
+    grid-row: 6/7;
+    justify-content: flex-start;
+  }
+}
 .main__footer-name {
   font-size: 1.5rem;
   margin-bottom: 1em;
   text-align: center;
   color: rgb(196, 203, 233);
 }
+@media (min-width: 1200px) {
+  .main__footer-name {
+    text-align: left;
+  }
+}
 .main__footer-value {
   font-size: 2.8rem;
   text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .main__footer-value {
+    text-align: left;
+  }
 }/*# sourceMappingURL=destination.css.map */

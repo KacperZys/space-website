@@ -54,7 +54,7 @@ p {
   margin: auto;
   color: white;
   padding: 20px;
-  height: 100vh;
+  min-height: 100svh;
   position: relative;
 }
 @media (min-width: 700px) {

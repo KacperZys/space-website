@@ -1,8 +1,8 @@
 document.querySelectorAll('.main__list-item').forEach(element => {
-    element.addEventListener('click', getData);
+    element.addEventListener('click', setData);
 });
 
-function getData(e) {
+function setData(e) {
     const image = document.querySelector('.main__image');
     const name = document.querySelector('.main__text-h1');
     const description = document.querySelector('.main__text-container');

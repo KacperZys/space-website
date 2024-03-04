@@ -20,6 +20,7 @@
     color: white;
     padding: 20px;
     min-height: 100svh;
+    overflow: hidden;
     position: relative;
 
     @include media(medium) {

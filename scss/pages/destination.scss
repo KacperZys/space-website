@@ -90,10 +90,13 @@
 
         &-container {
             list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap;
         }
 
         &-item {
-            display: inline-block;
             font-size: 1.8rem;
             margin: 0 .5em;
             cursor: pointer;
@@ -133,7 +136,7 @@
         &-container {
             font-size: 1.6rem;
             line-height: 30px;
-            padding-bottom: 2em;
+            padding-bottom: 1em;
             border-bottom: 2px solid rgba(71, 70, 70, .7);
         }
     }

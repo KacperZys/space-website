@@ -273,9 +273,12 @@ p {
 }
 .main__list-container {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 .main__list-item {
-  display: inline-block;
   font-size: 1.8rem;
   margin: 0 0.5em;
   cursor: pointer;
@@ -312,7 +315,7 @@ p {
 .main__text-container {
   font-size: 1.6rem;
   line-height: 30px;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   border-bottom: 2px solid rgba(71, 70, 70, 0.7);
 }
 .main__footer {

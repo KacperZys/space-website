@@ -40,9 +40,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80%;
-
-
 
     &__anchor-div {
         width: 150px;
@@ -51,6 +48,7 @@
         border-radius: 50%;
         cursor: pointer;
         margin: auto;
+        margin-top: 10em;
         @include flex(row, center, center);
 
         &:hover {
@@ -77,18 +75,22 @@
         margin: .5em 0;
     }
 
+    &__line-height {
+        line-height: 60px;
+    }
+
     @include media(large) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30% 70%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 125px);
 
         &__content-div {
-            grid-column: 1 / 2;
+            grid-column: 1 / 4;
             grid-row: 2 / 3;
         }
 
         &__anchor-div {
-            grid-column: 2 / 3;
+            grid-column: 5 / 6;
             grid-row: 2 / 3;
             width: 250px;
             height: 250px;
@@ -97,5 +99,5 @@
 }
 
 .big-font {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }

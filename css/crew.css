@@ -120,12 +120,18 @@ p {
     padding: 0 20px;
     font-size: 1.3rem;
   }
+  .header__menu-list-item:hover {
+    text-shadow: 0 0 white;
+  }
 }
 @media (min-width: 1200px) {
   .header__menu-list {
     margin: auto;
     counter-reset: first;
     counter-reset: second;
+  }
+  .header__menu-list-item:hover {
+    text-shadow: 0 0 white;
   }
   .header__menu-list-item::before {
     content: counter(first) counter(second);

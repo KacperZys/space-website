@@ -46,7 +46,9 @@
                     padding: 0 20px;
                     font-size: 1.3rem;
 
-
+                    &:hover {
+                        text-shadow: 0 0 white;
+                    }
                 }
             }
 
@@ -56,6 +58,10 @@
                 counter-reset: second;
 
                 &-item {
+
+                    &:hover {
+                        text-shadow: 0 0 white;
+                    }
 
                     &::before {
                         @include counter-before-el(counter(first) counter(second)) {
